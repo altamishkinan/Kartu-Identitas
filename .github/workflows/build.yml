@@ -1,0 +1,47 @@
+
+name: Build JAR
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Build project
+        run: |
+          chmod +x gradlew 2>/dev/null || true
+          if [ -f pom.xml ]; then
+            mvn clean package
+          elif [ -f gradlew ]; then
+            ./gradlew build
+          elif [ -f build.gradle ]; then
+            gradle build
+          else
+            echo "Build system tidak ditemukan!"
+            exit 1
+          fi
+
+      - name: Upload JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kartu-Identitas-JAR
+          path: |
+            **/target/*.jar
+            **/build/libs/*.jar
+          if-no-files-found: error
