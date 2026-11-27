@@ -1,0 +1,12 @@
+info:
+  namespace: veyrion
+
+items:
+  kartu_identitas:
+    display_name: "Kartu Identitas Veyrion"
+    permission_suffix: kartu_identitas
+    resource:
+      material: PAPER
+      generate: true
+      textures:
+        - item/kartu_identitas.png

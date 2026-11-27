@@ -1,0 +1,18 @@
+{
+ "providers": [
+  {
+   "type": "bitmap",
+   "file": "veyrion:font/row1.png",
+   "ascent": 246,
+   "height": 246,
+   "chars": [
+    " !\"#$%&'()*+,-./",
+    "0123456789:;<=>?",
+    "@ABCDEFGHIJKLMNO",
+    "PQRSTUVWXYZ[\\]^_",
+    "`abcdefghijklmno",
+    "pqrstuvwxyz{|}~\u0000"
+   ]
+  }
+ ]
+}

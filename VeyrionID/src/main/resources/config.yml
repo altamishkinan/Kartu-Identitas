@@ -1,0 +1,24 @@
+# Ras yang boleh dipilih saat mendaftar (ubah sesuai lore Veyrion)
+races:
+  - Manusia
+  - Elf
+  - Dwarf
+  - Beastkin
+  - Draconian
+
+# Jarak (blok) untuk /ki tunjuk
+show-radius: 6
+
+# Tampilan kartu di layar (butuh ItemsAdder + resource pack dari folder itemsadder/)
+hud:
+  enabled: true
+  duration-seconds: 20     # otomatis hilang; Sneak untuk menutup lebih cepat
+  offset-x: -460           # geser horizontal dari tengah layar (negatif = ke kiri)
+
+item:
+  # ID item ItemsAdder untuk kartu fisik. Kosongkan untuk kertas biasa.
+  itemsadder-id: "veyrion:kartu_identitas"
+  # Hanya dipakai kalau tidak pakai ItemsAdder
+  custom-model-data: 0
+
+prefix: "<#b8892b><bold>Veyrion</bold> <dark_gray>»</dark_gray> "

@@ -1,0 +1,13 @@
+{
+ "providers": [
+  {
+   "type": "bitmap",
+   "file": "veyrion:font/card_bg.png",
+   "ascent": 300,
+   "height": 310,
+   "chars": [
+    "\ue100"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+name: VeyrionID
+version: 1.1.0
+main: id.veyrion.ktp.VeyrionID
+api-version: '1.21'
+description: Kartu Identitas Kerajaan Veyrion
+softdepend: [ItemsAdder]
+commands:
+  ki:
+    description: Kartu Identitas Veyrion
+    aliases: [identitas, ktp]
+    usage: /ki <daftar|lihat|tunjuk|kartu|trust|untrust|trustlist|hapus|reload>
+permissions:
+  veyrion.id.use:
+    description: Melihat & menunjukkan kartu sendiri
+    default: true
+  veyrion.id.admin:
+    description: Semua perintah admin (daftar, trust, hapus, reload)
+    default: op
